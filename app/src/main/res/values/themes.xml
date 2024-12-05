@@ -1,0 +1,14 @@
+<resources>
+    <style name="Theme.HealthBooster" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>  <!-- Transparent status bar -->
+        <item name="colorAccent">@color/accent</item>
+
+        <!-- Optional: If you want the status bar color to match the background color -->
+        <item name="android:statusBarColor">@android:color/black</item>  <!-- Example with black background -->
+
+        <!-- Remove the action bar -->
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>

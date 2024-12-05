@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HealthBooster</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="heart_logo">Heart Logo</string>
+    <string name="heart_beat_rate">Heart Beat Rate</string>
+    <string name="_0">0</string>
+    <string name="calories_button">Calories Button</string>
+    <string name="calories">Calories</string>
+    <string name="add_food">Add Food</string>
+    <string name="add_food_button">Add Food Button</string>
+    <string name="heart_rate_button">Heart Rate Button</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="calories_logo">Calories logo</string>
+    <string name="steps_0">Steps: 0</string>
+</resources>
