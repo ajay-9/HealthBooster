@@ -104,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:layout_marginBottom="32dp"
                 android:orientation="vertical">
 
                 <FrameLayout
@@ -134,6 +135,46 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
+            <!-- Water Tracker Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drawable_circle"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/water_tracker_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/water_tracker_button"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/calories" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/water_tracker_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/water_tracker"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

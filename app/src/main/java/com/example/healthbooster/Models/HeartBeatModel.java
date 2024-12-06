@@ -1,4 +1,4 @@
-package com.example.healthbooster.Model;
+package com.example.healthbooster.Models;
 
 public class HeartBeatModel {
     private String id;

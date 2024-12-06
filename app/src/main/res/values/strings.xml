@@ -12,4 +12,13 @@
     <string name="calories_burned">Calories Burned</string>
     <string name="calories_logo">Calories logo</string>
     <string name="steps_0">Steps: 0</string>
+    <string name="goal_water">Goal: 2000 ml</string>
+    <string name="consumed_0_ml">Consumed: 0 ml</string>
+    <string name="add_water_value">Add 250 ml</string>
+    <string name="water_tracker_button">Water Tracker</string>
+    <string name="water_tracker">Water Tracker\n</string>
+    <string name="change_goal">Change goal</string>
+    <string name="enter_new_goal">Enter new goal !!</string>
+    <string name="reset_goal">Reset Goal</string>
+    <string name="reset">Reset\n</string>
 </resources>

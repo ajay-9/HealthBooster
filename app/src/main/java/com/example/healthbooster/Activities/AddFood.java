@@ -1,4 +1,4 @@
-package com.example.healthbooster;
+package com.example.healthbooster.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.healthbooster.Activities.StepCounterActivity;
 import com.example.healthbooster.databinding.ActivityAddFoodBinding;
 
 public class AddFood extends AppCompatActivity {
@@ -47,6 +46,12 @@ public class AddFood extends AppCompatActivity {
                 Intent intent = new Intent(AddFood.this, StepCounterActivity.class);
                 startActivity(intent);
             }
+        });
+
+        // Set click listener to navigate to WaterTrackerActivity
+        binding.waterTrackerButton.setOnClickListener(v -> {
+            Intent intent = new Intent(AddFood.this, WaterTrackerActivity.class);
+            startActivity(intent);
         });
     }
 }

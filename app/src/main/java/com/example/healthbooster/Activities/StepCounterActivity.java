@@ -55,13 +55,23 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (sensorManager != null) {
             stepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        }else {
+            Toast.makeText(this, "Step Counter Sensor not available", Toast.LENGTH_SHORT).show();
+
         }
     }
+
+
+    private int initialStepCount = -1;
 
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
-            totalSteps = (int) event.values[0];
+
+            if (initialStepCount < 0) {
+                initialStepCount = (int) event.values[0];
+            }
+            totalSteps = (int) event.values[0] - initialStepCount;
             caloriesBurned = totalSteps * CALORIES_PER_STEP;
 
             // Update calories burned
@@ -107,4 +117,5 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
             notificationManager.notify(0, notification);
         }
     }
+
 }

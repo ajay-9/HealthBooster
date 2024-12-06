@@ -1,0 +1,91 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/waterGoalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goal_water"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/waterConsumedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consumed_0_ml"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <ProgressBar
+            android:id="@+id/waterProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:progress="0"
+            android:background="@color/water"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <Button
+            android:id="@+id/addWaterButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:text="@string/add_water_value"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/newGoalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/enter_new_goal"
+            android:hint="@string/enter_new_goal"
+            android:backgroundTint="@color/white"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/changeGoalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_goal"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/red"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

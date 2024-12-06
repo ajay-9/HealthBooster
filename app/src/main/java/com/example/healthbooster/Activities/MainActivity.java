@@ -1,12 +1,11 @@
-package com.example.healthbooster;
+package com.example.healthbooster.Activities;
 
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.healthbooster.R;
 
 public class MainActivity extends AppCompatActivity {
 

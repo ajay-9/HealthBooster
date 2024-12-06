@@ -46,4 +46,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.wear)
     implementation(libs.cardview)
+    implementation(libs.room.common)
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
 }

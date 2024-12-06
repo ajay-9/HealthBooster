@@ -1,4 +1,4 @@
-package com.example.healthbooster;
+package com.example.healthbooster.Activities;
 
 import android.Manifest;
 import android.content.SharedPreferences;
@@ -8,14 +8,13 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.example.healthbooster.Model.HeartBeatModel;
+import com.example.healthbooster.Models.HeartBeatModel;
 import com.example.healthbooster.databinding.ActivityHeartRateBinding;
 
 public class HeartRate extends AppCompatActivity implements SensorEventListener {
@@ -47,20 +46,29 @@ public class HeartRate extends AppCompatActivity implements SensorEventListener 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (sensorManager != null) {
             heartRateSensor = sensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+        } else {
+            showToast("Heart Rate Sensor not available");
+
         }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+
+
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
             float heartRate = event.values[0];
+            if (heartRate > 0) {
+                // Update Heart Rate value in EditText
+                binding.heartRateValue.setText(String.format("Heart Rate: %.2f bpm", heartRate));
 
-            // Update Heart Rate value in EditText
-            binding.heartRateValue.setText(String.valueOf(heartRate));
+                // Save Heart Rate details
+                HeartBeatModel rate = createRateDetail(null, heartRate);
+                writeRateDetails(rate);
 
-            // Save Heart Rate details
-            HeartBeatModel rate = createRateDetail(null, heartRate);
-            writeRateDetails(rate);
+            } else {
+                showToast("Heart Rate not available");
+            }
         }
     }
 

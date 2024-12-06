@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND" />
-
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -17,19 +16,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthBooster">
         <activity
+            android:name=".Activities.WaterTrackerActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.StepCounterActivity"
             android:exported="false"
             android:taskAffinity="" />
         <activity
-            android:name=".HeartRate"
+            android:name=".Activities.HeartRate"
             android:exported="false"
             android:taskAffinity="" />
         <activity
-            android:name=".BrowseFoodType"
+            android:name=".Activities.BrowseFoodType"
             android:exported="false"
             android:taskAffinity="" />
         <activity
-            android:name=".AddFood"
+            android:name=".Activities.AddFood"
             android:exported="true"
             android:taskAffinity=""
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -40,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true"
             android:taskAffinity="" />
 
