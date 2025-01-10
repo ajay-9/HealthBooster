@@ -54,7 +54,7 @@ HealthBooster is a wearable app designed to promote a healthier lifestyle by ena
 *Log your water intake and monitor hydration levels.*
 
 ### Step Counter
-![Step Counter](./screenshots/step-counter.png)  
+![Step Counter](./screenshots/step.png)  
 *Track steps taken and calories burned throughout the day.*
 
 ### Heart Rate Monitor
